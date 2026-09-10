@@ -1,0 +1,613 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<title>Register your business</title>
+<meta name="theme-color" content="#fff"/>
+<link rel="stylesheet" href="https://d3cnqzq0ivprch.cloudfront.net/public-forms/prod/assets/23/icomoon/birdeye-fonts/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+<link rel="stylesheet" href="https://d3cnqzq0ivprch.cloudfront.net/public-forms/prod/assets/23/icomoon/phoenix/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ---- extracted from Birdeye register-business production bundle ---- */
+*{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+*,:after,:before{box-sizing:border-box}
+body{letter-spacing:0;color:#434343;position:relative;-webkit-font-smoothing:subpixel-antialiased;margin:0;padding:0;font-family:"Roboto",sans-serif;font-size:100%}
+html,body,div,span,button,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,figure{border:0;outline:0 none;text-decoration:none;margin:0;padding:0}
+.hidden,.hide{display:none}
+.no-select{-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}
+button:disabled{font-weight:300}
+.clearfix::after{content:"";clear:both;display:table}
+ol,ul{list-style:none}
+a:focus,button:focus,input:focus,textarea:focus{outline:none}
+.mb-15{margin-bottom:15px}
+.mb-20{margin-bottom:20px}
+.mb-40{margin-bottom:40px}
+.mb-30{margin-bottom:30px}
+.mt-30{margin-top:30px}
+.mt-20{margin-top:20px}
+.mt-50{margin-top:50px}
+.align-center{text-align:center}
+.tooltip-parent{position:relative}
+.tooltip-text{position:absolute;top:30px;left:-20px;display:none;background-color:#455b76;cursor:default;font-size:15px;color:#fff;line-height:1.2;border-radius:4px;padding:10px 15px}
+.tooltip-parent:hover .tooltip-text{display:block}
+.c-pointer{cursor:pointer}
+.overflow-hidden{overflow:hidden}
+.fieldsRow{position:relative;height:56px;border:1px solid #ccc;box-sizing:border-box;padding:10px;transition:all .1s ease-in}
+.fieldsRow.floating-label-focus{border:2px solid #1976d2}
+.fieldsRow.floating-label-focus label{line-height:14px;font-size:13px;opacity:1}
+.fieldsRow.floating-label-focus input{height:32px}
+.fieldsRow.floating-label-with-value{border:1px solid #ccc}
+.fieldsRow input{line-height:25px;background:rgba(0,0,0,0);border:0;margin:0;left:0;padding:0 10px;font-size:15px;position:absolute;height:100%;bottom:0;z-index:2;width:100%}
+.fieldsRow label{display:block;line-height:37px;transition:all .1s ease-in;position:relative;color:#8993a4;text-align:left;opacity:.75}
+.custom-dropdown{background:#fff;box-sizing:border-box;width:100%;margin:0 auto;border:1px solid #d8d8d8;height:40px;position:relative;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}
+.custom-dropdown .dd-place-holder{height:100%;padding:2px 12px 2px;box-sizing:border-box;cursor:pointer;position:relative}
+.custom-dropdown .dd-place-holder label{display:block;box-sizing:border-box;height:100%;font-size:16px;color:#878787;line-height:34px;font-weight:100;margin-left:4px;margin-right:4px;overflow:hidden;text-overflow:ellipsis;text-transform:capitalize;white-space:nowrap;transition:.2s ease;position:relative}
+.custom-dropdown .dd-options{border:1px solid #d8d8d8;border-top-color:#d8d8d8;background:none repeat scroll 0 0 #fff;z-index:10;position:absolute;box-sizing:border-box;width:100%}
+.custom-dropdown .dd-options ul{max-height:220px;list-style:none;display:block;width:calc(100% - 2px);margin:0 auto;padding:0 4px 4px;font-size:15px;color:#000;box-shadow:0 4px 5px rgba(0,0,0,.15);box-sizing:border-box;text-transform:capitalize;position:relative;overflow-x:hidden;overflow-y:auto}
+.custom-dropdown .dd-options ul li{margin:0;padding:9px 6px;list-style:none;line-height:15px;cursor:pointer}
+.custom-dropdown .dd-options ul li:hover{background:#e1e1e1;color:#444}
+.custom-dropdown .dd-options .search-bar{padding:4px;margin:4px;border:1px solid #aaa}
+.custom-dropdown .dd-options .search-bar>input{width:100%;height:28px;margin:0;border:0;outline:0;padding:4px 5px;color:#878787;position:static;background:none}
+.custom-dropdown .dd-arrow{position:absolute;width:10px;height:30px;right:24px;top:4px;text-align:center;box-sizing:border-box;padding:7px 0;line-height:8px;cursor:pointer}
+.custom-dropdown .dd-arrow .up,.custom-dropdown .dd-arrow .down{float:left;color:#6c6c6c}
+.custom-dropdown.blue-border{border:1px solid #09f}
+.custom-dropdown.blue-border.floating-label-focus .dd-place-holder label,.custom-dropdown.floating-label-focus .dd-place-holder label{display:block;line-height:28px;font-size:12px;height:auto}
+.custom-dropdown.floating-label-focus .dd-place-holder span{color:#212121;font-size:16px;font-weight:300}
+.hide{display:none !important}
+.loader-wrapper{position:fixed;width:100%;height:100%;background:rgba(255,255,255,.5);z-index:1}
+.container{max-width:910px;margin:0 auto;padding:64px 15px 145px}
+.errorMessage{color:#f44336;font-family:"Roboto",arial,sans-serif;font-size:11px;position:relative;bottom:-5px;text-align:left}
+.errorMessage.hide{display:none}
+.common-header{text-align:center;margin-bottom:30px}
+.common-header .img-box{margin-bottom:14px}
+.common-header .img-box img{width:98px}
+.common-header .info-box strong{font-size:23px;font-weight:300;font-family:"Poppins",sans-serif;color:#212121}
+.business-details h1{font-size:30px;font-weight:700;font-family:"Poppins",sans-serif;color:#212121;margin-bottom:7px}
+.business-details p{font-size:13px;line-height:1.69;font-family:"Roboto",arial,sans-serif;color:#212121;margin-bottom:30px}
+.business-details p a{color:#1976d2;text-decoration:none}
+.common-wrap h2{font-size:15px;font-weight:700;font-family:"Poppins",sans-serif;color:#212121;margin-bottom:10px}
+.common-wrap p{font-size:13px;font-weight:400;font-family:"Poppins",sans-serif;color:#212121;margin-bottom:10px}
+.common-wrap h3{font-size:13px;font-weight:700;font-family:"Poppins",sans-serif;color:#212121;margin-bottom:10px}
+.common-block{padding:30px;border-radius:4px;background-color:#f9fafb;margin-bottom:30px}
+.common-block .business-listing-wrapper{display:flex;justify-content:space-between;flex-wrap:wrap}
+.common-block .business-listing-wrapper li{width:48.2%;margin-bottom:30px}
+.common-block .business-listing-wrapper li.no-margin{margin-bottom:0}
+.common-block .business-listing-wrapper li.full-width{width:100%}
+.common-block .business-listing-wrapper li.full-width.custom-checkbox-wrap{display:flex;flex-direction:column;position:relative}
+.common-block .business-listing-wrapper li.full-width.custom-checkbox-wrap .custom-checkbox-label{margin-bottom:0;margin-right:5px}
+.common-block .business-listing-wrapper li.full-width.custom-checkbox-wrap .label-cont{margin-top:4px}
+.common-block .business-listing-wrapper li label{font-size:11px;font-family:"Roboto",arial,sans-serif;color:#212121;margin-bottom:5px;position:relative;display:inline-block}
+.common-block .business-listing-wrapper li label.label-cont{font-size:15px;font-family:"Roboto",arial,sans-serif;color:#212121;display:flex;align-items:center;margin-bottom:0;margin-right:20px}
+.common-block .business-listing-wrapper li label.label-cont input{margin-right:10px;width:20px;height:20px}
+.required-mark{font-size:11px;color:#f44336;margin-left:2px;font-weight:400;vertical-align:top}
+.common-block .business-listing-wrapper li .fieldsRow{height:38px;padding:0;background:#fff;border-radius:4px;border:0}
+.common-block .business-listing-wrapper li .fieldsRow.reg-number-block{position:relative}
+.common-block .business-listing-wrapper li .fieldsRow.reg-number-block img{position:absolute;top:10px;right:12px;z-index:1;cursor:pointer;object-fit:contain}
+.common-block .business-listing-wrapper li .fieldsRow input{position:static;padding:10px 15px;line-height:15px;font-size:13px;border-radius:4px;border:1px solid #ccc;width:100%}
+.common-block .business-listing-wrapper li .fieldsRow input::placeholder{color:rgba(100,122,142,.4);font-weight:400}
+.common-block .business-listing-wrapper li .fieldsRow input:focus{border:1px solid #09f}
+.common-block .business-listing-wrapper li .business-input .custom-dropdown{height:38px;border:1px solid #ccc;background:#fff;border-radius:4px}
+.common-block .business-listing-wrapper li .business-input .custom-dropdown .dd-place-holder{padding:10px 15px}
+.common-block .business-listing-wrapper li .business-input .custom-dropdown .dd-place-holder label{font-size:13px;line-height:17px;margin:0;color:rgba(100,122,142,.5);font-weight:400;text-transform:none}
+.common-block .business-listing-wrapper li .business-input .custom-dropdown.floating-label-focus-with-value .dd-place-holder label{color:#212121;font-weight:400}
+.common-block .business-listing-wrapper li .business-input .custom-dropdown .dd-options{width:100.8%;top:calc(100% + 1px);left:-1px}
+.common-block .business-listing-wrapper li .radio-wrap{display:flex;align-items:center;position:relative;flex-wrap:wrap}
+.common-block .business-listing-wrapper li .radio-wrap .radio-label{margin:5px 150px 10px 0}
+.common-block .business-listing-wrapper li .radio-wrap div{display:flex;align-items:center}
+.common-block .business-listing-wrapper li .radio-wrap .errorMessage{position:absolute;left:0;bottom:-24px}
+.common-block .business-listing-wrapper li .phone-wrap{display:flex;background:#fff;border:1px solid #ccc;padding:0 26px 0 40px;border-radius:4px;position:relative}
+.common-block .business-listing-wrapper li .phone-wrap:before{content:"";position:absolute;width:18px;height:18px;background:url("https://d3cnqzq0ivprch.cloudfront.net/public-forms/prod/assets/23/phone-icon.png") no-repeat center;z-index:1;background-size:contain;top:8px;left:12px}
+.common-block .business-listing-wrapper li .phone-wrap.focus{border:1px solid #09f}
+.common-block .business-listing-wrapper li .phone-wrap .custom-dropdown,.common-block .business-listing-wrapper li .phone-wrap input{border:0;background:rgba(0,0,0,0);padding:0;height:auto;font-size:13px}
+.common-block .business-listing-wrapper li .phone-wrap .custom-dropdown{width:70px;padding:9.5px 0}
+.common-block .business-listing-wrapper li .phone-wrap .custom-dropdown .dd-options{width:calc(100% + 35px);left:-35px}
+.common-block .business-listing-wrapper li .phone-wrap .custom-dropdown .dd-place-holder{padding:0}
+.common-block .business-listing-wrapper li .phone-wrap .custom-dropdown .dd-place-holder span{font-size:13px}
+.common-block .business-listing-wrapper li .phone-wrap .custom-dropdown .dd-arrow{right:7px;top:3px}
+.common-block .business-listing-wrapper li .phone-wrap input{width:100%;padding:9.5px 0}
+.common-block .business-listing-wrapper li .phone-wrap input::placeholder{color:#647a8e}
+.common-block.already-register-block{text-align:center}
+.common-block.already-register-block figure{margin-bottom:10px}
+.common-block.already-register-block strong{font-size:17px;font-weight:700;color:#4caf50}
+.common-block.already-register-block p{max-width:596px;margin:20px auto 0;font-size:15px;line-height:1.47;color:#212121}
+.error-block{max-width:500px;margin:0 auto 20px;background:#fdecea;padding:15px;font-size:15px;line-height:1.47;color:#212121;display:block}
+.register-business .button-wrapper{text-align:center}
+.register-business .button-wrapper .submit-btn{width:130px;margin:0 auto;background:#1976d2;padding:12px 40px;cursor:pointer;color:#fff;font-size:15px;font-family:"Roboto",arial,sans-serif;border-radius:4px;border:0}
+.register-business .submit-modal{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:1;background-color:rgba(33,33,33,.5)}
+.register-business .submit-modal .submit-modal-content{position:absolute;background:#fff;top:182px;left:50%;transform:translateX(-50%);padding:30px;max-width:450px;border-radius:4px}
+.register-business .submit-modal .submit-modal-content h2{font-size:17px;margin-bottom:20px}
+.register-business .submit-modal .submit-modal-content p{font-size:15px;margin-bottom:20px;font-family:"Roboto",arial,sans-serif;line-height:21px}
+.register-business .submit-modal .submit-modal-content i{position:absolute;top:6px;right:6px;font-size:24px;cursor:pointer;display:block}
+.register-business .submit-modal .submit-modal-content .modal-anchor-wrap{display:flex;align-items:center;justify-content:flex-end}
+.register-business .submit-modal .submit-modal-content .modal-anchor-wrap button{font-size:15px;padding:10px 15px;color:#1976d2;font-weight:500;margin-right:10px;font-family:"Roboto",arial,sans-serif;background:rgba(0,0,0,0);border-radius:4px;cursor:pointer;border:0}
+.register-business .submit-modal .submit-modal-content .modal-anchor-wrap button.modal-submit-button{background:#1976d2;margin-right:0;color:#fff;font-weight:400}
+.register-business.no-scroll{overflow:hidden}
+.question-block{font-size:11px;margin-left:5px;position:relative;cursor:pointer}
+.question-block::before{color:#999}
+.question-block:hover::after{content:attr(data-tooltip);position:absolute;bottom:calc(100% + 8px);left:0;background:#455b76;color:#fff;font-family:"Roboto",arial,sans-serif;font-size:13px;font-weight:400;line-height:1.5;text-transform:none;white-space:pre-wrap;width:280px;padding:12px 15px;border-radius:4px;box-shadow:0 3px 8px rgba(0,0,0,.25);z-index:20}
+.info-banner{display:flex;align-items:flex-start;gap:10px;background:#fff8e1;border:1px solid #ffe0a3;border-radius:4px;padding:12px 15px;margin-bottom:20px;font-family:"Roboto",arial,sans-serif;font-size:13px;line-height:1.5;color:#212121}
+.info-banner i{color:#f5a623;font-size:16px;margin-top:1px}
+.info-banner strong{font-weight:700}
+.info-banner .see-reference-link{color:#1976d2;font-weight:400;text-decoration:none;white-space:nowrap}
+.reference-modal{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:2;background-color:rgba(33,33,33,.5);display:flex;align-items:center;justify-content:center}
+.reference-modal .reference-modal-content{position:relative;background:#fff;padding:20px;border-radius:4px;max-width:90vw;max-height:90vh;display:flex;flex-direction:column}
+.reference-modal .reference-modal-content h2{font-size:17px;margin-bottom:15px;font-family:"Poppins",sans-serif;color:#212121}
+.reference-modal .reference-modal-content .close-icon{position:absolute;top:10px;right:15px;font-size:20px;cursor:pointer;color:#647a8e;line-height:1}
+.reference-modal .reference-modal-content img{max-width:100%;max-height:75vh;object-fit:contain;border:1px solid #e9e9eb;border-radius:4px}
+@media only screen and (max-width: 767px){
+  .common-block .business-listing-wrapper li{width:100%}
+  .common-block .business-listing-wrapper li .radio-wrap{flex-direction:column;align-items:flex-start}
+  .common-block .business-listing-wrapper li .radio-wrap .radio-label{margin-bottom:5px}
+  .common-block .business-listing-wrapper li .radio-wrap div{flex-direction:column;align-items:flex-start}
+  .common-block .business-listing-wrapper li.no-margin{margin-bottom:30px}
+  .common-block .business-listing-wrapper li label.label-cont{margin-bottom:10px}
+  .register-business .submit-modal .submit-modal-content{max-width:100%;width:90%}
+}
+</style>
+</head>
+<body class="register-business" id="register-business">
+<div class="container">
+
+  <div class="businessHeaderWrap">
+    <div class="common-header">
+      <div class="img-box"> <img src="https://d3cnqzq0ivprch.cloudfront.net/prod/css/images/themes/christmas/logo.svg"/> </div>
+      <div class="info-box"><strong class="checkInLocationName business-name">Your Business Name</strong></div>
+    </div>
+  </div>
+
+  <div id="form_container">
+    <div class="business-details">
+      <h1>Register business details</h1>
+      <p>According to new phone carrier regulations, all businesses must register themselves to continue sending messages within the U.S without carrier filtering. <a target="_blank" href="https://support.birdeye.com/en_US/birdeye-messaging/why-do-i-need-to-register-my-business-to-send-text-messages">Learn more</a></p>
+    </div>
+
+    <form action="#" method="post" id="registration_form" novalidate>
+
+      <div class="business-information-wrap common-wrap">
+        <h2>General information</h2>
+        <div class="business-information-block common-block">
+          <div class="info-banner">
+            <i class="icon_phoenix-warning"></i>
+            <span>Registration errors are often caused by mismatched details. Keep your IRS CP575 document handy and enter information exactly as it appears. <a href="#" id="see-reference-link" class="see-reference-link">See reference.</a></span>
+          </div>
+          <ul class="business-listing-wrapper">
+
+            <li class="custom-checkbox-wrap full-width" id="registered_buisness_type_container">
+              <div>
+                <label class="custom-checkbox-label">Business registered</label> <span class="required-mark">*</span>
+                <i class="icon_phoenix-question-circle question-block" data-tooltip="If your business does not have an EIN or CBN number only then deselect this option. EIN/CBN number is required if you have more than one location or receptionist enabled."></i>
+              </div>
+              <div>
+                <label for="is_business_registered" class="label-cont">
+                  <input type="checkbox" id="is_business_registered" name="registered_buisness_type" value="EIN/CBN" checked>
+                  <span>EIN/CBN available</span>
+                </label>
+              </div>
+            </li>
+
+            <li id="registration_id_container">
+              <label>Registration ID type</label><span class="required-mark">*</span>
+              <div class="business-input" id="registrationIdWrapper"></div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li id="registration_number_container">
+              <label>Registration ID Number</label><span class="required-mark">*</span>
+              <div class="fieldsRow reg-number-block" id="reg-num">
+                <input id="registration_number" name="registration_number" placeholder="E.g. 89-0089988" class="business-input" autocomplete="off">
+              </div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li id="business_name_container">
+              <label>Legal business name<span class="required-mark">*</span></label>
+              <i class="icon_phoenix-question-circle question-block" data-tooltip="Enter the exact legal business name of your company, as registered with the EIN"></i>
+              <div class="fieldsRow reg-number-block">
+                <input id="business_name" name="business_name" placeholder="Your company's legal business name" class="business-input" autocomplete="off">
+              </div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li id="business_address_1_container">
+              <label>Address line-1<span class="required-mark">*</span></label>
+              <div class="fieldsRow">
+                <input id="business_address_1" name="business_add_1" placeholder="Your company's street address" class="business-input" autocomplete="off">
+              </div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li id="business_address_2_container">
+              <label>Address line-2</label>
+              <div class="fieldsRow">
+                <input id="business_address_2" name="business_add_2" placeholder="Additional address line" class="business-input" autocomplete="off">
+              </div>
+            </li>
+
+            <li id="city_container">
+              <label>City<span class="required-mark">*</span></label>
+              <div class="fieldsRow">
+                <input id="city" name="city" placeholder="E.g. Los Angeles" class="business-input" autocomplete="off">
+              </div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li id="state_container">
+              <label>State/Province/Region<span class="required-mark">*</span></label>
+              <div class="business-input" id="businessRegionState"></div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li class="no-margin" id="country_container">
+              <label>Country<span class="required-mark">*</span></label>
+              <div class="business-input" id="countryWrapper"></div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li id="zip_code_container">
+              <label>Zip/Postal code</label><span class="required-mark">*</span>
+              <div class="fieldsRow">
+                <input id="zip_code" name="zip_code" placeholder="E.g. 81504" class="business-input" autocomplete="off">
+              </div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="business-information-wrap common-wrap">
+        <h2>Business information</h2>
+        <div class="business-information-block common-block">
+          <ul class="business-listing-wrapper">
+
+            <li id="business_industry_container">
+              <label>Business industry<span class="required-mark">*</span></label>
+              <div class="business-input" id="industryTypeWrapper"></div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li id="business_type_container">
+              <label>Business type<span class="required-mark">*</span></label>
+              <div class="business-input" id="businessTypeWrapper"></div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li id="website_url_container">
+              <label>Website url<span class="required-mark">*</span></label>
+              <div class="fieldsRow">
+                <input id="website_url" name="website_url" placeholder="Your business website URL" class="business-input" autocomplete="off">
+              </div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li id="business_email_container">
+              <label>Business email</label><span class="required-mark">*</span>
+              <div class="fieldsRow">
+                <input type="email" id="business_email" name="business_email" placeholder="Your company's primary business email ID" class="business-input" autocomplete="off">
+              </div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li id="social_media_url_container">
+              <label>Social media profile url</label>
+              <div class="fieldsRow">
+                <input id="social_media_url" name="social_media_url" placeholder="Linkedin, Twitter or Facebook" class="business-input" autocomplete="off">
+              </div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li>
+              <div class="full-width radio-wrap" id="company_type_container">
+                <label class="radio-label">Company type</label><span class="required-mark">*</span>
+                <div>
+                  <label for="private" class="label-cont"><input type="radio" id="private" name="company_type" value="Private" checked> <span>Private</span></label>
+                  <label for="public" class="label-cont"><input type="radio" id="public" name="company_type" value="Public"> <span>Public</span></label>
+                </div>
+                <div class="errorMessage hide"></div>
+              </div>
+            </li>
+
+            <li class="hide" id="stock_exchange_container">
+              <label>Stock exchange<span class="required-mark">*</span></label>
+              <div class="business-input" id="stockExchangeWrapper"></div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li class="no-margin hide" id="stock_ticker_container">
+              <label>Stock ticker</label><span class="required-mark">*</span>
+              <i class="icon_phoenix-question-circle question-block" data-tooltip='A ticker of a stock is its ticker symbol, which is a unique grouping of letters that identifies a specific company. For example, Apple has a ticker symbol of "AAPL," Exxon has a ticker symbol of "XOM," and Coca-Cola has a ticker symbol of "KO."'></i>
+              <div class="fieldsRow">
+                <input id="stock_ticker" name="stock_ticker" placeholder="Unique code of your publicly traded stock" class="business-input" autocomplete="off">
+              </div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="business-information-wrap common-wrap">
+        <h2>Contact details</h2>
+        <p>We recommend you add contact details of business owners or decision makers</p>
+        <div class="business-information-block common-block">
+          <h3>Primary Contact</h3>
+          <ul class="business-listing-wrapper">
+
+            <li id="first_name_1_container">
+              <label>First name<span class="required-mark">*</span></label>
+              <div class="fieldsRow">
+                <input id="first_name_1" name="first_name_1" placeholder="First name" class="business-input" autocomplete="off">
+              </div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li id="last_name_1_container">
+              <label>Last name<span class="required-mark">*</span></label>
+              <div class="fieldsRow">
+                <input id="last_name_1" name="last_name_1" placeholder="Last name" class="business-input" autocomplete="off">
+              </div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li id="email_1_container">
+              <label>Email<span class="required-mark">*</span></label>
+              <div class="fieldsRow">
+                <input type="email" id="email_1" name="email_1" placeholder="Email ID" class="business-input" autocomplete="off">
+              </div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li id="business_title_1_container">
+              <label>Business title<span class="required-mark">*</span></label>
+              <div class="fieldsRow">
+                <input id="business_title_1" name="business_title_1" placeholder="E.g. Vice President" class="business-input" autocomplete="off">
+              </div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li id="job_title_1_container">
+              <label>Job title<span class="required-mark">*</span></label>
+              <div class="business-input" id="job_title_1"></div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+            <li id="phone_number_1_container">
+              <label>Phone number<span class="required-mark">*</span></label>
+              <div class="phone-wrap">
+                <div class="business-input" id="countryCodesWrapper_1"></div>
+                <input type="tel" id="phone_number_1" name="phone_number_1" class="textBox" placeholder="(XXX) XXX - XXXX" autocomplete="off">
+              </div>
+              <div class="errorMessage hide"></div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+    </form>
+    <span id="error-block" class="error-block hide"></span>
+    <div class="button-wrapper"><button type="submit" class="submit-btn send-btn">Submit</button></div>
+  </div>
+
+  <div class="already-register-block submitted-form-block common-block hide" id="submitted">
+    <figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAzUExURUdwTE2wUE2xUVK0VkywUE2wUU2xUk2wUE2wUU+yU06wU0ywUE6yUU2wUEywUUyxUEyvUGLzVLMAAAAQdFJOUwDYYRbnfU/0vypAoDXRq4xAuQE7AAAA60lEQVQ4y61TW5LDIAzjYWJDmkT3P+2yqQGz7QydzvIRwFYsIYxz/zlyEs/sJeW36e1AH8f2ko5S47SnENJOdSlxzj9qUErblYqmx5Rn8FR1qwGDiAT/R1gm0GAR8IvwzJBeD5hVxzJHj4FtFcP9PbQYUKZ8AH4Zy3NyLoFmAsJ1LwhJC+4TYIdviye1V2BzqYtLiuRbkisa9ji7FrYAndIwqAGU4rzdyoqzFCoyevhYN2LUynTM+vMZrOntmN2oai6bE3WjhtUJzV1nrTbXcskgsFe4uu63DeNtwyxbbt2067ZfP5wPnt636weOewyIsSQ7lAAAAABJRU5ErkJggg=="></figure>
+    <strong>Business details are submitted!</strong>
+    <p id="submit-msg">We've received your registration details and will notify you once verification is complete.</p>
+  </div>
+
+  <div class="submit-modal hide">
+    <div class="submit-modal-content common-wrap">
+      <i class="close-icon icon_phoenix-enclose"></i>
+      <h2>Are you sure you want to submit?</h2>
+      <p>Once you submit, you can't edit these details. This information will enable you to continue sending text campaigns uninterrupted.</p>
+      <div class="modal-anchor-wrap">
+        <button type="button" class="cancel-submit-button">Back to editing</button>
+        <button type="button" class="modal-submit-button"><span>Submit</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="reference-modal hide" id="reference-modal">
+    <div class="reference-modal-content">
+      <i class="close-icon icon_phoenix-enclose" id="close-reference-modal"></i>
+      <h2>IRS CP575 reference</h2>
+      <img src="CP%20575.png" alt="IRS CP575 sample document">
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  function makeDropdown(container, options, placeholder, hiddenName, withSearch){
+    var wrap = document.createElement('div');
+    wrap.className = 'custom-dropdown';
+
+    var placeHolder = document.createElement('div');
+    placeHolder.className = 'dd-place-holder';
+    var label = document.createElement('label');
+    label.textContent = placeholder;
+    placeHolder.appendChild(label);
+    wrap.appendChild(placeHolder);
+
+    var arrow = document.createElement('div');
+    arrow.className = 'dd-arrow';
+    arrow.innerHTML = '<span class="up icon_phoenix-arrow-up1" style="display:none"></span><span class="down icon_phoenix-arrow-down1">&#9662;</span>';
+    wrap.appendChild(arrow);
+
+    var ddOptions = document.createElement('div');
+    ddOptions.className = 'dd-options hide';
+
+    if (withSearch) {
+      var searchBar = document.createElement('div');
+      searchBar.className = 'search-bar';
+      var searchInput = document.createElement('input');
+      searchInput.type = 'text';
+      searchInput.placeholder = 'Search';
+      searchBar.appendChild(searchInput);
+      ddOptions.appendChild(searchBar);
+      searchInput.addEventListener('click', function(e){ e.stopPropagation(); });
+      searchInput.addEventListener('input', function(){
+        var q = searchInput.value.toLowerCase();
+        Array.prototype.forEach.call(ul.querySelectorAll('li'), function(li){
+          li.style.display = li.textContent.toLowerCase().indexOf(q) > -1 ? '' : 'none';
+        });
+      });
+    }
+
+    var ul = document.createElement('ul');
+    options.forEach(function(opt){
+      var li = document.createElement('li');
+      li.textContent = opt;
+      li.addEventListener('click', function(){
+        label.textContent = opt;
+        wrap.classList.add('floating-label-focus-with-value');
+        hiddenInput.value = opt;
+        closeAll();
+      });
+      ul.appendChild(li);
+    });
+    ddOptions.appendChild(ul);
+    wrap.appendChild(ddOptions);
+
+    var hiddenInput = document.createElement('input');
+    hiddenInput.type = 'hidden';
+    hiddenInput.name = hiddenName;
+    wrap.appendChild(hiddenInput);
+
+    function closeAll(){
+      Array.prototype.forEach.call(document.querySelectorAll('.dd-options'), function(o){ o.classList.add('hide'); });
+      Array.prototype.forEach.call(document.querySelectorAll('.custom-dropdown'), function(o){ o.classList.remove('blue-border'); });
+    }
+
+    placeHolder.addEventListener('click', function(e){
+      e.stopPropagation();
+      var isOpen = !ddOptions.classList.contains('hide');
+      closeAll();
+      if (!isOpen) {
+        ddOptions.classList.remove('hide');
+        wrap.classList.add('blue-border');
+        if (withSearch) { var si = ddOptions.querySelector('input'); if (si) si.focus(); }
+      }
+    });
+
+    container.appendChild(wrap);
+    document.addEventListener('click', closeAll);
+    return wrap;
+  }
+
+  makeDropdown(document.getElementById('registrationIdWrapper'), ['USA: Employer Identification Number (EIN)', 'Canada: Canadian Business Number (CBN)'], 'Select Registration ID Type', 'registration_id_type', false);
+  makeDropdown(document.getElementById('businessRegionState'), ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming'], 'Select state', 'state', true);
+  makeDropdown(document.getElementById('countryWrapper'), ['United States','Canada','Mexico','Puerto Rico','United Kingdom','Australia','India'], 'Select country', 'country', true);
+  makeDropdown(document.getElementById('industryTypeWrapper'), ['Automotive','Healthcare','Real Estate','Retail','Professional Services','Technology','Hospitality','Education','Legal','Financial Services','Non-profit','Other'], 'Select industry', 'business_industry', true);
+  makeDropdown(document.getElementById('businessTypeWrapper'), ['Sole Proprietorship','Partnership','Limited Liability Corporation','Corporation','Non-profit','Government'], 'Select business type', 'business_type', false);
+  makeDropdown(document.getElementById('stockExchangeWrapper'), ['NYSE','NASDAQ','LSE','TSX','Other'], 'Select stock exchange', 'stock_exchange', false);
+  makeDropdown(document.getElementById('job_title_1'), ['Director','General Manager','Vice President','President','CEO','Owner','Other'], 'Select job title', 'job_title_1', false);
+  makeDropdown(document.getElementById('countryCodesWrapper_1'), ['+1','+44','+91','+52','+61'], '+1', 'country_code_1', false);
+
+  // floating labels for plain text fields
+  Array.prototype.forEach.call(document.querySelectorAll('.fieldsRow input'), function(input){
+    var row = input.closest('.fieldsRow');
+    input.addEventListener('focus', function(){ row.classList.add('floating-label-focus'); });
+    input.addEventListener('blur', function(){
+      row.classList.remove('floating-label-focus');
+      if (input.value) row.classList.add('floating-label-with-value');
+      else row.classList.remove('floating-label-with-value');
+    });
+  });
+
+  // EIN/CBN checkbox toggles registration id fields
+  var einCheckbox = document.getElementById('is_business_registered');
+  var regIdContainer = document.getElementById('registration_id_container');
+  var regNumContainer = document.getElementById('registration_number_container');
+  einCheckbox.addEventListener('change', function(){
+    var required = einCheckbox.checked;
+    [regIdContainer, regNumContainer].forEach(function(c){
+      c.querySelectorAll('.required-mark').forEach ? null : null;
+    });
+    Array.prototype.forEach.call([regIdContainer, regNumContainer], function(c){
+      var mark = c.querySelector('.required-mark');
+      if (mark) mark.style.display = required ? '' : 'none';
+    });
+  });
+
+  // Public/Private radio toggles stock fields
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="company_type"]'), function(radio){
+    radio.addEventListener('change', function(){
+      var isPublic = document.getElementById('public').checked;
+      document.getElementById('stock_exchange_container').classList.toggle('hide', !isPublic);
+      document.getElementById('stock_ticker_container').classList.toggle('hide', !isPublic);
+    });
+  });
+
+  // basic required-field validation on submit
+  var form = document.getElementById('registration_form');
+  var submitModal = document.querySelector('.submit-modal');
+
+  function validate(){
+    var ok = true;
+    Array.prototype.forEach.call(form.querySelectorAll('.required-mark'), function(mark){
+      if (mark.style.display === 'none') return;
+      var li = mark.closest('li') || mark.closest('div.full-width');
+      if (!li) return;
+      var input = li.querySelector('input[type="text"], input:not([type]), input[type="email"], input[type="tel"]');
+      var hidden = li.querySelector('input[type="hidden"]');
+      var errBox = li.querySelector('.errorMessage');
+      var filled = (input && input.value.trim()) || (hidden && hidden.value);
+      if (input || hidden) {
+        if (!filled) {
+          ok = false;
+          if (errBox) { errBox.textContent = 'This field is required'; errBox.classList.remove('hide'); }
+        } else if (errBox) {
+          errBox.classList.add('hide');
+        }
+      }
+    });
+    return ok;
+  }
+
+  document.querySelector('.submit-btn').addEventListener('click', function(e){
+    e.preventDefault();
+    if (validate()) {
+      submitModal.classList.remove('hide');
+    }
+  });
+
+  document.querySelector('.cancel-submit-button').addEventListener('click', function(){
+    submitModal.classList.add('hide');
+  });
+
+  document.querySelector('.close-icon').addEventListener('click', function(){
+    submitModal.classList.add('hide');
+  });
+
+  document.querySelector('.modal-submit-button').addEventListener('click', function(){
+    submitModal.classList.add('hide');
+    document.getElementById('form_container').classList.add('hide');
+    document.getElementById('submitted').classList.remove('hide');
+  });
+
+  // reference popup (See reference.)
+  var referenceModal = document.getElementById('reference-modal');
+  document.getElementById('see-reference-link').addEventListener('click', function(e){
+    e.preventDefault();
+    referenceModal.classList.remove('hide');
+  });
+  document.getElementById('close-reference-modal').addEventListener('click', function(){
+    referenceModal.classList.add('hide');
+  });
+  referenceModal.addEventListener('click', function(e){
+    if (e.target === referenceModal) referenceModal.classList.add('hide');
+  });
+
+})();
+</script>
+</body>
+</html>
