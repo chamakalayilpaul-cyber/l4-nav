@@ -80,6 +80,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:none}
 .common-block .business-listing-wrapper li.full-width{width:100%}
 .common-block .business-listing-wrapper li.full-width.custom-checkbox-wrap{display:flex;flex-direction:column;position:relative}
 .common-block .business-listing-wrapper li.full-width.custom-checkbox-wrap .custom-checkbox-label{margin-bottom:0;margin-right:5px}
+.common-block .business-listing-wrapper li.full-width.custom-checkbox-wrap>div:first-child{display:flex;align-items:center;gap:4px}
 .common-block .business-listing-wrapper li.full-width.custom-checkbox-wrap .label-cont{margin-top:4px}
 .common-block .business-listing-wrapper li label{font-size:11px;font-family:"Roboto",arial,sans-serif;color:#212121;margin-bottom:5px;position:relative;display:inline-block}
 .common-block .business-listing-wrapper li label.label-cont{font-size:15px;font-family:"Roboto",arial,sans-serif;color:#212121;display:flex;align-items:center;margin-bottom:0;margin-right:20px}
@@ -129,10 +130,13 @@ a:focus,button:focus,input:focus,textarea:focus{outline:none}
 .register-business.no-scroll{overflow:hidden}
 .question-block{font-size:11px;margin-left:5px;position:relative;cursor:pointer}
 .question-block::before{color:#999}
+.field-hint{position:absolute;top:100%;left:0;margin-top:6px;font-size:11px;color:#647a8e;line-height:1.4;display:flex;align-items:center;gap:5px}
+.field-hint .icon-info-svg{color:#647a8e;margin-top:0}
 .question-block:hover::after{content:attr(data-tooltip);position:absolute;bottom:calc(100% + 8px);left:0;background:#455b76;color:#fff;font-family:"Roboto",arial,sans-serif;font-size:13px;font-weight:400;line-height:1.5;text-transform:none;white-space:pre-wrap;width:280px;padding:12px 15px;border-radius:4px;box-shadow:0 3px 8px rgba(0,0,0,.25);z-index:20}
 .info-banner{display:flex;align-items:flex-start;gap:10px;background:#fff8e1;border:1px solid #ffe0a3;border-radius:4px;padding:12px 15px;margin-bottom:20px;font-family:"Roboto",arial,sans-serif;font-size:13px;line-height:1.5;color:#212121}
-.info-banner i{color:#f5a623;font-size:16px;margin-top:1px}
 .info-banner strong{font-weight:700}
+.icon-info-svg{display:inline-block;width:16px;height:16px;min-width:16px;background-color:currentColor;-webkit-mask-image:url('info.svg');mask-image:url('info.svg');-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;flex-shrink:0;margin-top:2px}
+.info-banner .icon-info-svg{color:#f44336}
 .info-banner .see-reference-link{color:#1976d2;font-weight:400;text-decoration:none;white-space:nowrap}
 .reference-modal{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:2;background-color:rgba(33,33,33,.5);display:flex;align-items:center;justify-content:center}
 .reference-modal .reference-modal-content{position:relative;background:#fff;padding:20px;border-radius:4px;max-width:90vw;max-height:90vh;display:flex;flex-direction:column}
@@ -172,14 +176,14 @@ a:focus,button:focus,input:focus,textarea:focus{outline:none}
         <h2>General information</h2>
         <div class="business-information-block common-block">
           <div class="info-banner">
-            <i class="icon_phoenix-warning"></i>
+            <span class="icon-info-svg"></span>
             <span>Registration errors are often caused by mismatched details. Keep your IRS CP575 document handy and enter information exactly as it appears. <a href="#" id="see-reference-link" class="see-reference-link">See reference.</a></span>
           </div>
           <ul class="business-listing-wrapper">
 
             <li class="custom-checkbox-wrap full-width" id="registered_buisness_type_container">
               <div>
-                <label class="custom-checkbox-label">Business registered</label> <span class="required-mark">*</span>
+                <label class="custom-checkbox-label">Business registered</label><span class="required-mark">*</span>
                 <i class="icon_phoenix-question-circle question-block" data-tooltip="If your business does not have an EIN or CBN number only then deselect this option. EIN/CBN number is required if you have more than one location or receptionist enabled."></i>
               </div>
               <div>
@@ -206,7 +210,6 @@ a:focus,button:focus,input:focus,textarea:focus{outline:none}
 
             <li id="business_name_container">
               <label>Legal business name<span class="required-mark">*</span></label>
-              <i class="icon_phoenix-question-circle question-block" data-tooltip="Enter the exact legal business name of your company, as registered with the EIN"></i>
               <div class="fieldsRow reg-number-block">
                 <input id="business_name" name="business_name" placeholder="Your company's legal business name" class="business-input" autocomplete="off">
               </div>
@@ -512,16 +515,15 @@ a:focus,button:focus,input:focus,textarea:focus{outline:none}
   makeDropdown(document.getElementById('job_title_1'), ['Director','General Manager','Vice President','President','CEO','Owner','Other'], 'Select job title', 'job_title_1', false);
   makeDropdown(document.getElementById('countryCodesWrapper_1'), ['+1','+44','+91','+52','+61'], '+1', 'country_code_1', false);
 
-  // floating labels for plain text fields
-  Array.prototype.forEach.call(document.querySelectorAll('.fieldsRow input'), function(input){
-    var row = input.closest('.fieldsRow');
-    input.addEventListener('focus', function(){ row.classList.add('floating-label-focus'); });
-    input.addEventListener('blur', function(){
-      row.classList.remove('floating-label-focus');
-      if (input.value) row.classList.add('floating-label-with-value');
-      else row.classList.remove('floating-label-with-value');
-    });
-  });
+  // legal business name: show helper hint below the field while focused, without shifting layout
+  var businessNameInput = document.getElementById('business_name');
+  var businessNameRow = businessNameInput.closest('.fieldsRow');
+  var businessNameHint = document.createElement('div');
+  businessNameHint.className = 'field-hint hide';
+  businessNameHint.innerHTML = '<span class="icon-info-svg"></span><span>Enter exact legal business name as registered with the EIN</span>';
+  businessNameRow.appendChild(businessNameHint);
+  businessNameInput.addEventListener('focus', function(){ businessNameHint.classList.remove('hide'); });
+  businessNameInput.addEventListener('blur', function(){ businessNameHint.classList.add('hide'); });
 
   // EIN/CBN checkbox toggles registration id fields
   var einCheckbox = document.getElementById('is_business_registered');
