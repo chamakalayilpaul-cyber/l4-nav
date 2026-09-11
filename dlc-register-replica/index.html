@@ -520,10 +520,20 @@ a:focus,button:focus,input:focus,textarea:focus{outline:none}
   var businessNameRow = businessNameInput.closest('.fieldsRow');
   var businessNameHint = document.createElement('div');
   businessNameHint.className = 'field-hint hide';
-  businessNameHint.innerHTML = '<span class="icon-info-svg"></span><span>Enter exact legal business name as registered with the EIN</span>';
+  businessNameHint.innerHTML = '<span class="icon-info-svg"></span><span>Enter exact legal business name as shown in your CP575 letter</span>';
   businessNameRow.appendChild(businessNameHint);
   businessNameInput.addEventListener('focus', function(){ businessNameHint.classList.remove('hide'); });
   businessNameInput.addEventListener('blur', function(){ businessNameHint.classList.add('hide'); });
+
+  // registration ID number: show helper hint below the field while focused
+  var regNumberInput = document.getElementById('registration_number');
+  var regNumberRow = regNumberInput.closest('.fieldsRow');
+  var regNumberHint = document.createElement('div');
+  regNumberHint.className = 'field-hint hide';
+  regNumberHint.innerHTML = '<span class="icon-info-svg"></span><span>Enter the number exactly as shown in your CP575 letter</span>';
+  regNumberRow.appendChild(regNumberHint);
+  regNumberInput.addEventListener('focus', function(){ regNumberHint.classList.remove('hide'); });
+  regNumberInput.addEventListener('blur', function(){ regNumberHint.classList.add('hide'); });
 
   // EIN/CBN checkbox toggles registration id fields
   var einCheckbox = document.getElementById('is_business_registered');
